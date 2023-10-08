@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="todo-container">
+        <h1>To-Do List</h1>
+        <div class="input-container">
+            <input type="text" id="task-input" placeholder="Add a new task">
+            <button id="add-button">Add</button>
+        </div>
+        <ul id="task-list">
+            <!-- Tasks will be added here dynamically using JavaScript -->
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+// JavaScript code for handling tasks
+const taskInput = document.getElementById("task-input");
+const addButton = document.getElementById("add-button");
+const taskList = document.getElementById("task-list");
+
+addButton.addEventListener("click", addTask);
+
+function addTask() {
+    const taskText = taskInput.value;
+    if (taskText.trim() === "") return; // Prevent empty tasks
+
+    const taskItem = document.createElement("li");
+    taskItem.innerHTML = `
+        ${taskText}
+        <button class="edit-button">Edit</button>
+        <button class="delete-button">Delete</button>
+    `;
+
+    taskList.appendChild(taskItem);
+
+    taskInput.value = ""; // Clear input field
+}
+
+// You can add event listeners and functions to handle editing and deleting tasks here
