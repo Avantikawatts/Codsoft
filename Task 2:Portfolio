@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h1>About Me</h1>
+        <p>Your introduction and personal information go here.</p>
+    </section>
+
+    <section id="portfolio">
+        <h1>Portfolio</h1>
+        <div class="project">
+            <img src="project1.jpg" alt="Project 1">
+            <h2>Project 1</h2>
+            <p>Description of your project goes here.</p>
+        </div>
+
+        <div class="project">
+            <img src="project2.jpg" alt="Project 2">
+            <h2>Project 2</h2>
+            <p>Description of your project goes here.</p>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+
+    <section id="contact">
+        <h1>Contact Me</h1>
+        <p>You can reach me at <a href="mailto:your.email@example.com">your.email@example.com</a>.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Your Name</p>
+    </footer>
+</body>
+</html>
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header/navigation */
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Style the sections */
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+/* Style the portfolio projects */
+.project {
+    margin-bottom: 30px;
+}
+
+.project img {
+    max-width: 100%;
+}
+
+/* Style the footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
